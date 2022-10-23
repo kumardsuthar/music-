@@ -1,0 +1,446 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color:rgb(82, 91, 91) ;
+}
+#main{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+    /* background-color: cadetblue; */
+    /* align-content: flex-end; */
+}
+#p{
+    font-size: 24px;
+}
+.right{
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    margin: 3% 100px;
+    /* background-color: antiquewhite; */
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10.3px);
+    background-color: rgba(250, 247, 247, 0.833);
+    border-radius: 20px;
+   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 30px , rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    /* height: fit-content; */
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 10px 100px;
+
+}
+.left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 3% 100px;
+    border-radius: 20px;
+
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 30px , rgba(0, 0, 0, 0.22) 0px 15px 12px;
+   
+
+}
+div.scroll{
+    height: 500px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.left #head-p{
+    width: 100%;
+    font-size: 20px;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+   
+}
+.right img {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 30px , rgba(0, 0, 0, 0.22) 0px 15px 12px;
+   border: 7px double black;
+    
+}
+
+ .rotate {
+    animation: rotation 8s  infinite linear ;
+    animation-delay: 0;
+    
+}
+@keyframes  rotation{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(359deg);
+    }
+}
+.right button{
+    background-color: orange;
+    width: 70px;
+    height: 70px;
+    margin: 2px 9px;
+    border-radius: 50%;
+
+}
+.song-list{
+    background-color: rgb(227, 219, 219);
+    width: 500px;
+    margin:10px 20px;
+  
+    padding: 20px;
+   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 30px , rgba(0, 0, 0, 0.22) 0px 15px 12px;
+   border: 0;
+   border-radius: 10px;
+}
+.border {
+    border: 3px solid black;
+
+}
+.left{
+    padding: 20px 100px;
+   height: fit-content;
+   flex-wrap: wrap;
+
+}
+
+/* music wave css  ::::::::::::::::::::        */ 
+
+#loader{
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  align-items: center;
+}
+.load .wave {
+ 
+    background: #191313;
+    height: 40px;
+    width: 10px;
+    border-radius: 50px;
+    margin: 0 5px;
+    animation:  animate .8s linear infinite;
+}
+
+@keyframes animate{
+    50%{
+        height: 20%;
+    }
+    100%{
+        height: 100%;
+    }
+}
+
+.wave:nth-child(1){
+    animation-delay: 0s ;
+    background-color: blue;
+    
+}
+.wave:nth-child(2){
+    animation-delay: 0.3s;
+    background-color: red;
+
+}
+.wave:nth-child(3){
+    animation-delay: 0.6s;
+    background-color: orange;
+
+}
+.wave:nth-child(4){
+    animation-delay: 0.9s;
+    background-color: black;
+
+}
+.wave:nth-child(5){
+    animation-delay: 0.6s;
+    background-color: orange;
+
+}
+.wave:nth-child(6){
+    animation-delay: 0.3s;
+    background-color: red;
+
+}
+.wave:nth-child(7){
+    animation-delay: 0s;
+    background-color: blue;
+
+}
+.creator h2{
+    text-align: center;
+    color: rgba(183, 176, 168, 0.705);
+    text-shadow: 1px 1px 2px black;
+    margin: 2px;
+}
+
+/*  media screen for 1450px ::::::::::::::::::::::::::::::::::::::::*/
+
+
+@media (max-width:1450px){
+    body{
+        height: fit-content;
+        margin: 20px auto;
+    }
+    #main{
+        margin-top: 5% auto;
+    }
+    .left{
+        width: fit-content;
+        margin:10px 20px;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+        /* margin: 10px 40px; */
+    }
+
+    div.scroll{
+        width:fit-content;
+        padding: 20px;
+        margin: 10px auto;
+    }
+    .right{
+        
+        justify-content: center;
+        width: fit-content;
+        margin:10px 20px;
+        padding: 0;
+        align-items: center;
+    }
+    .song-list{
+        width: fit-content;
+        height: 100px;
+        padding: 20px;
+        margin: 10px 20px;
+ 
+    }
+    .right img{
+        margin: 20px auto;
+        width: 200px;
+        height: 200px;
+    }
+    .right button{
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    background-color: rgb(177, 163, 163);
+    box-shadow: 1px 2px 5px black;
+    }
+    #loader{
+        height: 60px;
+        margin: 20px auto;
+    }
+    .load .wave{
+        height: 30px;
+        width: 10px;
+    }
+    .creator h2{
+        margin: 50px;
+    }
+}
+
+
+/* media screen for 900px  :::::::::::::::::::::::::::: */
+
+
+@media (max-width:900px){
+    body{
+        height: fit-content;
+        margin: 20px auto;
+    }
+    #main{
+        flex-direction: column;
+        margin: 40px auto;
+    }
+    .left{
+        flex-direction:column;
+        flex-wrap: nowrap;
+        width: 580px;
+        margin:10px auto;
+        padding: 20px;
+        justify-content: center;
+        /* margin: 10px 40px; */
+    }
+
+    div.scroll{
+        width:480px;
+        height: 400px;
+        padding:10px;
+        margin: 2px auto;
+    }
+    .right{
+        flex-direction: row;
+        justify-content: center;
+        width: 580px;
+        /* height: 500px; */
+        margin:10px auto;
+        padding:20px;
+    }
+    .song-list{
+        width: 450px;
+        padding: 20px;
+        margin:10px auto;
+    }
+    .right img{
+        margin: 20px auto;
+        width: 200px;
+        height: 200px;
+    }
+    .right button{
+        display: inline;
+        float: left;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    background-color: rgb(193, 190, 188);
+   
+    }
+    #loader{
+        height: 40px;
+        margin: 20px auto;
+    }
+    .load .wave{
+        height: 10px;
+        width: 7px;
+    }
+
+  
+}
+
+/* media screen  for 650px :::::::::::::::::::::::::::::::: */
+
+@media (max-width:650px){
+    body{
+        height: fit-content;
+        margin: 20px auto;
+    }
+    #main{
+        flex-direction: column;
+        margin: 30px auto;
+    }
+    .left{
+        flex-direction: column;
+        width: 80%;
+        margin:10px auto;
+        padding:20px;
+        justify-content: center;
+        /* margin: 10px 40px; */
+    }
+
+    div.scroll{
+        width:300px;
+        padding: 10px 20px;
+        margin: 10px auto;
+    }
+    .right{
+        flex-direction: row;
+        justify-content: center;
+        width: 80%;
+        margin:10px auto;
+        padding: 20px;
+    }
+    .song-list{
+        width: 250px;
+        padding: 20px;
+        margin: 10px 0;
+        text-align: center;
+    }
+    .right img{
+        margin: 20px auto;
+        width: 200px;
+        height: 200px;
+    }
+    .right button{
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    background-color: rgb(183, 175, 175);
+    }
+    #loader{
+        height: 40px;
+        margin: 20px auto;
+    }
+    .load .wave{
+        height: 10px;
+        width: 7px;
+    }
+}
+/* media screen for 400px  :::::::::::::::::::::::::::::::::::::::::  */
+
+@media (max-width:380px){
+    body{
+        height: fit-content;
+        margin: 10px auto;
+        padding: 20px auto;
+    }
+    #main{
+        flex-direction: column;
+        margin: 4px auto;
+    }
+    .left{
+        flex-direction: column;
+        width: 80%;
+        margin:10px auto;
+        padding: 20px;
+        justify-content: center;
+        /* margin: 10px 40px; */
+    }
+
+    div.scroll{
+        width:200px;
+        padding: 10px 10px;
+        height:400px;
+    }
+    .right{
+        flex-direction: row;
+        justify-content: center;
+        width: 80%;
+        margin:10px auto;
+        padding: 20px;
+    }
+    .song-list{
+        width: 190px;
+        padding: 20px;
+        margin: 10px 0;
+        height: 100px;
+    }
+    .right img{
+        margin: 20px auto;
+        width: 150px;
+        height: 150px;
+    }
+    .right button{
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    background-color: rgb(215, 209, 209);
+   box-shadow: rgba(165, 163, 163, 0.3) 0px 19px 30px , rgba(162, 159, 159, 0.22) 0px 15px 12px;
+
+    }
+    #loader{
+        height: 40px;
+        margin: 20px auto;
+    }
+    .load .wave{
+        height: 10px;
+        width: 7px;
+    }
+    .left p {
+        width: 100%;
+        word-wrap: break-word;
+    }
+  
+}
+
+

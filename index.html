@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>MUSIC PLAYER</title>
+  </head>
+  <body>
+
+    <div id="main">
+      
+      <div class="left">
+        <p id="head-p">SONG LIST</p>
+
+        <div class="song-list">
+          <p>name : aabaad barbaad</p>
+          <p>singer : ARIJIT SINGH</p>
+        </div>
+
+        <div class="song-list">
+          <p>name : morni banke</p>
+          <p>singer : GURU RANDHAWA</p>
+        </div>
+
+        <div class="song-list">
+          <p>name : third song</p>
+          <p>singer : third singer</p>
+        </div>
+
+        <div class="song-list">
+          <p>name : forth song</p>
+          <p>singer : forth singer</p>
+        </div>
+
+        <div class="song-list">
+          <p>name : fifth song</p>
+          <p>singer : fifth singer</p>
+        </div>
+      </div>
+
+      <div class="right">
+        <img
+          src="ab67616d0000b2737c47019d9cc68e1060a3fcb9.jpeg"
+          alt="img-music"
+          class="img"
+        />
+
+        <input type="range" min="0" max="100" id="range" />
+        <button id="pre">previous</button>
+        <button id="play">play</button>
+        <button id="next">next</button>
+      </div>
+
+      <audio id="song">
+        <source
+          src="_Aabaad_Barbaad_Dj_Chetas_(REMIX)_Abhishek,_Aditya,_Rajkummar,_Sanya,_Fatima__Arijit,_Pritam(128k).m4a"
+        />
+      </audio>
+
+
+    </div>
+
+    <script>
+      let img = document.querySelector(".img");
+      let songs= document.querySelectorAll(".song-list");
+
+      //    song play ::
+
+
+      // songs.addEventListener("click" , function(){
+      //   song.src="_Aabaad_Barbaad_Dj_Chetas_(REMIX)_Abhishek,_Aditya,_Rajkummar,_Sanya,_Fatima__Arijit,_Pritam(128k).m4a";
+      //   song.play();
+      // });
+
+      let play = document.getElementById("play");
+      play.addEventListener("click", function () {
+        img.src = "maxresdefault.jpg";
+
+        song.play();
+      });
+
+      let pause = document.getElementById("play");
+      pause.addEventListener("dblclick", function () {
+        song.pause();
+      });
+
+      //   next :::
+
+      let next = document.getElementById("next");
+
+      next.addEventListener("click", function () {
+        song.src =
+          "_Morni_Banke_Video__Badhaai_Ho__Tanishk_Bagchi__Neha_Kakkar__Ayushmann_K,_Sanya_M(128k).mp3";
+        img.src = "ab67616d0000b2737c47019d9cc68e1060a3fcb9.jpeg";
+
+        song.play();
+      });
+
+      //   previous
+      let pre = document.getElementById("pre");
+      pre.addEventListener("click", function () {
+        song.src =
+          "_Aabaad_Barbaad_Dj_Chetas_(REMIX)_Abhishek,_Aditya,_Rajkummar,_Sanya,_Fatima__Arijit,_Pritam(128k).m4a";
+        img.src = "maxresdefault.jpg";
+
+        song.play();
+      });
+    </script>
+  </body>
+</html>
