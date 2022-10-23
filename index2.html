@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="style.css" />
+    <title>MUSIC PLAYER</title>
+  </head>
+  <body>
+    <div id="main">
+      <div class="right">
+        <p id="p"> --------------------------------- </p>
+        <img
+          src="blank.jpg"
+          alt="music"
+          class="img"
+        />
+
+          <div id="loader">
+            <span class="wave"></span>
+            <span class="wave"></span>
+            <span class="wave"></span>
+            <span class="wave"></span>
+            <span class="wave"></span>
+            <span class="wave"></span>
+            <span class="wave"></span>
+
+          </div>
+        <br>
+
+        <button id="play" class="btn"><i class="fa fa-play" style="color: black;font-size: 20px;"></i><br> play</button>
+        <button id="pause" class="btn"><i class="fa fa-pause" style="color: black;font-size: 20px;"></i> <br> pause</button>
+
+        <button id="next" class="btn"><i class="fa fa-arrow-right" style="color: black;font-size: 20px;"></i> <br> next</button>
+
+      </div>
+
+
+      <div class="left">
+
+        <p id="head-p">SONG LIST</p>
+<div class="scroll">
+        <button id="song1" class="song-list">
+          <p> KHAIR MANGDA</p>
+          <p>BY-- Atif Aslam</p>
+        </button>
+
+        <button id="song2" class="song-list">
+          <p>AGAR TUM SATH HO</p>
+          <p> BY-- Arijit Singh</p>
+        </button>
+
+        <button id="song3" class="song-list">
+          <p> AAJA NACHLE </p>
+          <p> BY-- Salim–Sulaiman,_Piyush_Mishra</p>
+        </button>
+
+        <button id="song4" class="song-list">
+          <p>AAWARA SHAAM HAI</p>
+          <p>BY-- Meet_Bros_Ft._Piyush_Mehroliyaa</p>
+        </button>
+
+        <button id="song5" class="song-list">
+
+          <p>SAAWRE</p>
+          <p>BY-- Arijit Singh</p>
+        </button>
+
+        <button id="song6" class="song-list">
+          <p> JEENA JEENA</p>
+          <p>BY-- ATIF ASLAM</p>
+        </button>
+
+        <button id="song7" class="song-list">
+          <p> WISHLIST </p>
+          <p>BY-- Dino James</p>
+        </button>
+
+        <button id="song8" class="song-list">
+          <p>FIRSE MACHAYENGE </p>
+          <p>BY-- Emiway Bantai</p>
+        </button>
+
+        <button id="song9" class="song-list">
+          <p>Zindagi Aa Rha Hu Me</p>
+          <p>BY-- Atif Aslam</p>
+        </button>
+
+        <button id="song10" class="song-list">
+          <p> MAIYYA MAINU</p>
+          <p> BY--sachet-Parampara</p>
+        </button>
+
+      </div>
+
+      </div>
+
+      <audio id="song">
+        <source
+          src="Atif_Aslam_-_Khair_Mangda(128k).mp3";
+        />
+      </audio>
+    </div>
+    <div class="creator">
+      <h2>CREATE BY DILIP SUTHAR</h2>
+    </div>
+
+
+
+  </body>
+
+  <script>
+    let img = document.querySelector(".img");
+
+    let songs = document.querySelectorAll(".song-list");
+
+    let song = document.getElementById("song");
+
+    let musicwave = document.getElementById("loader");
+    let mtitle = document.getElementById("p");
+
+
+    //   song play and pause :::  function
+
+
+ 
+    let pause = document.getElementById("pause");
+    pause.addEventListener("click", function () {
+      img.classList.remove("rotate");
+      song.pause();
+      musicwave.classList.remove('load');
+       mtitle.innerHTML="------------------------";
+
+    });
+    
+    let play = document.getElementById("play");
+    play.addEventListener("click", function () {
+      img.src = "blank.jpg";
+      img.classList.add("rotate");
+      song.play();
+      musicwave.classList.add('load');
+      mtitle.innerHTML= " enjoy...";
+    
+
+    });
+
+    let next = document.getElementById("next");
+    next.addEventListener("click", function () {
+      img.src = "blank.jpg";
+      img.classList.add("rotate");
+      song.src =
+        "Agar_Tum_Saath_Ho_(Papa_Pandey_Lofi_Remake)__Indian_Lofi__Bollywood_Lofi(128k).mp3";
+
+      song.play();
+      musicwave.classList.add('load');
+      mtitle.innerHTML="Agar_Tum_Saath_Ho_";
+
+
+
+    });
+
+
+
+
+    let song1 = document.getElementById("song1");
+    song1.addEventListener("click", function () {
+      img.src = "maxresdefault.jpg";
+      img.classList.add("rotate");
+      musicwave.classList.add('load');
+      
+      song.src="Atif_Aslam_-_Khair_Mangda(128k).mp3";
+      
+      song.play();
+      mtitle.innerHTML="_Aabaad_Barbaad_Dj_Chetas";
+    });
+
+    let song2 = document.getElementById("song2");
+    song2.addEventListener("click", function () {
+      img.src = "maxresdefault (1).jpg";
+      img.classList.add("rotate");
+      musicwave.classList.add('load');
+
+      song.src =
+        "Agar_Tum_Saath_Ho_(Papa_Pandey_Lofi_Remake)__Indian_Lofi__Bollywood_Lofi(128k).mp3";
+
+      song.play();
+      mtitle.innerHTML="Agar_Tum_Saath_Ho_";
+
+    });
+
+    let song3 = document.getElementById("song3");
+    song3.addEventListener("click", function () {
+      img.src = "size_l.jpg";
+      img.classList.add("rotate");
+      musicwave.classList.add('load');
+
+      song.src =
+        "Aaja_Nachle_Title_Song__Madhuri_Dixit__Sunidhi_Chauhan__Salim–Sulaiman,_Piyush_Mishra__Full_Song(128k).mp3";
+
+      song.play();
+      mtitle.innerHTML="Aaja_Nachle_";
+      
+    });
+
+    let song4 = document.getElementById("song4");
+    song4.addEventListener("click", function () {
+      img.src = "crop_480x480_1595848353_2742293.jpg";
+      img.classList.add("rotate");
+      musicwave.classList.add('load');
+
+      song.src =
+        "Aawara_Shaam_Hai__Meet_Bros_Ft._Piyush_Mehroliyaa__Manjul,_Rits_Badiani,_Shabbir__Hit_Song(128k).mp3";
+
+      song.play();
+      mtitle.innerHTML="Aawara_Shaam_Hai";
+
+
+    });
+
+    let song5 = document.getElementById("song5");
+    song5.addEventListener("click", function () {
+      img.src = "ab67616d0000b2737c47019d9cc68e1060a3fcb9.jpeg";
+      img.classList.add("rotate");
+      musicwave.classList.add('load');
+
+      song.src =
+        "Saware__Arijit_Singh__Pritam__New_Song_2021(128k).mp3";
+
+      song.play();
+      mtitle.innerHTML="_Morni_Banke_";
+
+    });
+
+    let song6 = document.getElementById("song6");
+    song6.addEventListener("click", function () {
+      img.src = "jeena.jpg";
+      img.classList.add("rotate");
+      musicwave.classList.add('load');
+
+      song.src =
+        "Atif_Aslam_Jeena_Jeena_(_Vocals_Only_)_Without_Music__Lyrical_Video__Its_Aadeez(128k).mp3";
+
+      song.play();
+      mtitle.innerHTML="Atif_Aslam_Jeena_Jeena_";
+
+    });
+
+    let song7 = document.getElementById("song7");
+    song7.addEventListener("click", function () {
+      img.src = "wishlist.jpg";
+      img.classList.add("rotate");
+      musicwave.classList.add('load');
+
+      song.src =
+        "Dino_James_–_Wishlist_feat_Kaprila___Official_Music_Video(128k).mp3";
+
+      song.play();
+      mtitle.innerHTML="Dino_James_Wishlist_";
+
+    });
+
+    let song8 = document.getElementById("song8");
+    song8.addEventListener("click", function () {
+      img.src = "machayenge.jpg";
+      img.classList.add("rotate");
+      musicwave.classList.add('load');
+
+      song.src =
+        "EMIWAY_-_FIRSE_MACHAYENGE_(OFFICIAL_MUSIC_VIDEO)(128k).mp3";
+
+      song.play();
+      mtitle.innerHTML="EMIWAY_-_FIRSE_MACHAYENGE_";
+
+    });
+
+
+    let song9 = document.getElementById("song9");
+    song9.addEventListener("click", function () {
+      img.src = "zindagi.jpeg";
+      img.classList.add("rotate");
+      musicwave.classList.add('load');
+
+      song.src =
+        "Zindagi_Studio_Version__Atif_Aslam_&_Tiger_Shroff(128k).mp3";
+      song.play();
+      mtitle.innerHTML="Zindagi_Studio_Version";
+
+    });
+
+    let song10 = document.getElementById("song10");
+    song10.addEventListener("click", function () {
+      img.src = "maiyya.jpg";
+      img.classList.add("rotate");
+      musicwave.classList.add('load');
+
+      song.src =
+        "Maiyya_Mainu_-_Jersey__Shahid_Kapoor_&_Mrunal_Thakur__Sachet-Parampara__Shellee_Gowtam_Tinnanuri(128k).mp3";
+
+      song.play();
+      mtitle.innerHTML="Maiyya_Mainu_-_Jersey__";
+
+    });
+  </script>
+</html>
